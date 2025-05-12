@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Documenti Disponibili</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; }
+        a { text-decoration: none; color: #333; font-size: 18px; }
+        a:hover { color: #007BFF; }
+    </style>
+</head>
+<body>
+    <h1>📄 Documenti Disponibili</h1>
+    <ul>
+        {% for file in files %}
+        <li><a href="/download/{{ file }}" target="_blank">{{ file }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
